@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Project Cost Calculator And Order Wizard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon/favicon-blue.png">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon-blue.png">
+
+  <!-- Google Fonts - Poppins -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700">
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+
+  <!-- Custom Font Icons -->
+  <link rel="stylesheet" href="vendor/icomoon/css/iconfont.css">
+
+  <!-- Fancy Checkbox -->
+  <link rel="stylesheet" href="vendor/pure-css-checkbox/pure-css-checkbox.min.css">
+
+  <!-- Template Stylesheets -->
+  <!-- <link rel="stylesheet" href="css/main.blue.css"> -->
+  <link rel="stylesheet" href="css/styles.order-3.yellow.min.css">
+
+  <!-- Custom Stylesheet - For Your Changes -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Preloader-->
+  <div class="preloader"></div>
+
+  <!-- Navbar-->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+    </nav>
+  </header>
+
+  <!-- Hero Section-->
+  <section class="hero">
+    <div class="container text-center">
+      <h1 class="hero-heading">Project Cost Calculator</h1>
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <p class="lead text-muted">You may use our site cost calculator for a project estimate. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Wizard Start -->
+  <section id="orderWizard">
+
+    <!-- Container Start -->
+    <div class="container">
+
+      <!-- Calculator Table Start -->
+      <div id="calcTable">
+
+        <!-- Responsive Table Start -->
+        <div class="rtable rtable--collapse">
+
+          <!-- Table Heading Start -->
+          <div class="rtable-row rtable-row--head">
+            <div class="rtable-cell item-cell column-heading">Product or Service</div>
+            <div class="rtable-cell price-cell column-heading">Price</div>
+            <div class="rtable-cell discount-cell column-heading">Discount</div>
+            <div class="rtable-cell quantity-cell column-heading">Quantity</div>
+            <div class="rtable-cell extra-option-cell column-heading">Extra Option</div>
+            <div class="rtable-cell sub-sum-cell column-heading sub-sum-title">Sub Sum</div>
+          </div><!-- Table Heading End -->
+
+          <!-- Table Row 1. Start -->
+          <div class="rtable-row to-calc">
+            <!-- Item 1 Name -->
+            <div class="rtable-cell item-cell">
+              <div class="rtable-cell--content title-content">
+                <a href="img/product-images/1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Product 1"
+                  title="Preview"><i class="fa fa-angle-right"></i> Logo Design</a>
+                <input type="text" name="item-name-1" value="Product or Service Name 1"
+                  class="form-control in-odd-row item-name" hidden />
+              </div>
+            </div>
+            <!-- Item 1 Price -->
+            <div class="rtable-cell price-cell">
+              <div class="rtable-cell--heading">Price</div>
+              <div class="rtable-cell--content price-content">
+                <input type="text" name="price-1" value="2 400" class="form-control in-odd-row price" disabled />
+              </div>
+            </div>
+            <!-- Item 1 Discount -->
+            <div class="rtable-cell discount-cell">
+              <div class="rtable-cell--heading">Discount</div>
+              <div class="rtable-cell--content toggle-content">
+                <label for="discount-toggle-1" class="cost-calculator-toggle">
+                  <input id="discount-toggle-1" type="checkbox" class="discount" name="discount-toggle-1" value="10"
+                    checked disabled>
+                  <span class="cost-calculator-toggle-slider" data-yes="10 %" data-no="NO"></span>
+                </label>
+              </div>
+            </div>
+            <!-- Item 1 Quantity -->
+            <div class="rtable-cell quantity-cell">
+              <div class="rtable-cell--heading">Quantity</div>
+              <input type="text" name="quantity-1" placeholder="EnterQty" class="form-control quantity" tabindex="1"
+                maxlength="8">
+            </div>
+            <!-- Item 1 Extra Option -->
+            <div class="rtable-cell extra-option-cell">
+              <div class="rtable-cell--heading">Extra Option</div>
+              <div class="rtable-cell--content toggle-content">
+                <label for="extra-option-toggle-1" class="cost-calculator-toggle">
+                  <input id="extra-option-toggle-1" type="checkbox" class="extra-option" name="extra-option-toggle-1"
+                    value="16">
+                  <span class="cost-calculator-toggle-slider" data-yes="YES" data-no="NO"></span>
+                </label>
+              </div>
+            </div>
+            <!-- Item 1 Sub Sum -->
+            <div class="rtable-cell sub-sum-cell">
+              <div class="rtable-cell--heading">Sub Sum</div>
+              <input type="text" name="sub-sum-1" value="0" class="form-control in-odd-row sub-sum" disabled />
+            </div>
+          </div><!-- Table Row 1. End -->
+
+          <!-- Table Row 2. Striped Start -->
+          <div class="rtable-row is-striped to-calc">
+            <!-- Item 2 Name -->
+            <div class="rtable-cell item-cell">
+              <div class="rtable-cell--content title-content">
+                <a href="img/product-images/2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Product 2"
+                  title="Preview"><i class="fa fa-angle-right"></i> Copywriting</a>
+                <input type="text" name="item-name-2" value="Product or Service Name 2"
+                  class="form-control in-even-row item-name" hidden />
+              </div>
+            </div>
+            <!-- Item 2 Price -->
+            <div class="rtable-cell price-cell">
+              <div class="rtable-cell--heading">Price</div>
+              <div class="rtable-cell--content price-content">
+                <input type="text" name="price-2" value="350" class="form-control in-even-row price" disabled />
+              </div>
+            </div>
+            <!-- Item 2 Discount -->
+            <div class="rtable-cell discount-cell">
+              <div class="rtable-cell--heading">Discount</div>
+              <div class="rtable-cell--content toggle-content">
+                <label for="discount-toggle-2" class="cost-calculator-toggle">
+                  <input id="discount-toggle-2" type="checkbox" class="discount" name="discount-toggle-2" value="0"
+                    disabled>
+                  <span class="cost-calculator-toggle-slider" data-yes="YES" data-no="NO"></span>
+                </label>
+              </div>
+            </div>
+            <!-- Item 2 Quantity -->
+            <div class="rtable-cell quantity-cell">
+              <div class="rtable-cell--heading">Quantity</div>
+              <input type="text" name="quantity-2" placeholder="EnterQty" class="form-control quantity" tabindex="2"
+                maxlength="8">
+            </div>
+            <!-- Item 2 Extra Option -->
+            <div class="rtable-cell extra-option-cell">
+              <div class="rtable-cell--heading">Extra Option</div>
+              <div class="rtable-cell--content toggle-content">
+                <label for="extra-option-toggle-2" class="cost-calculator-toggle">
+                  <input id="extra-option-toggle-2" type="checkbox" class="extra-option" name="extra-option-toggle-2"
+                    value="12">
+                  <span class="cost-calculator-toggle-slider" data-yes="YES" data-no="NO"></span>
+                </label>
+              </div>
+            </div>
+            <!-- Item 2 Sub Sum -->
+            <div class="rtable-cell sub-sum-cell">
+              <div class="rtable-cell--heading">Sub Sum</div>
+              <input type="text" name="sub-sum-2" value="0" class="form-control in-even-row sub-sum" disabled />
+            </div>
+          </div><!-- Table Row 2. Striped End -->
+
+          <!-- Table Row 3. Start -->
+          <div class="rtable-row to-calc">
+            <!-- Item 3 Name -->
+            <div class="rtable-cell item-cell">
+              <div class="rtable-cell--content title-content">
+                <a href="img/product-images/3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Product 3"
+                  title="Preview"><i class="fa fa-angle-right"></i> SEO Optimization</a>
+                <input type="text" name="item-name-3" value="Product or Service Name 3"
+                  class="form-control in-odd-row item-name" hidden />
+              </div>
+            </div>
+            <!-- Item 3 Price -->
+            <div class="rtable-cell price-cell">
+              <div class="rtable-cell--heading">Price</div>
+              <div class="rtable-cell--content price-content">
+                <input type="text" name="price-1" value="40" class="form-control in-odd-row price" disabled />
+              </div>
+            </div>
+            <!-- Item 3 Discount -->
+            <div class="rtable-cell discount-cell">
+              <div class="rtable-cell--heading">Discount</div>
+              <div class="rtable-cell--content toggle-content">
+                <label for="discount-toggle-3" class="cost-calculator-toggle">
+                  <input id="discount-toggle-3" type="checkbox" class="discount" name="discount-toggle-3" value="25"
+                    checked disabled>
+                  <span class="cost-calculator-toggle-slider" data-yes="25 %" data-no="NO"></span>
+                </label>
+              </div>
+            </div>
+            <!-- Item 3 Quantity -->
+            <div class="rtable-cell quantity-cell">
+              <div class="rtable-cell--heading">Quantity</div>
+              <input type="text" name="quantity-3" placeholder="EnterQty" class="form-control quantity" tabindex="3"
+                maxlength="8">
+            </div>
+            <!-- Item 3 Extra Option -->
+            <div class="rtable-cell extra-option-cell">
+              <div class="rtable-cell--heading">Extra Option</div>
+              <div class="rtable-cell--content toggle-content">
+                <label for="extra-option-toggle-3" class="cost-calculator-toggle">
+                  <input id="extra-option-toggle-3" type="checkbox" class="extra-option" name="extra-option-toggle-3"
+                    value="26">
+                  <span class="cost-calculator-toggle-slider" data-yes="YES" data-no="NO"></span>
+                </label>
+              </div>
+            </div>
+            <!-- Item 3 Sub Sum -->
+            <div class="rtable-cell sub-sum-cell">
+              <div class="rtable-cell--heading">Sub Sum</div>
+              <input type="text" name="sub-sum-3" value="0" class="form-control in-odd-row sub-sum" disabled />
+            </div>
+          </div><!-- Table Row 3. End -->
+
+
+          <!-- Total Sum Row Start -->
+          <div class="rtable-row">
+            <div class="rtable-cell item-cell">
+              <div class="rtable-cell--content title-content">
+                <label class="total-sum-icon"><a href="#inputFirstName" class="btn-generate">
+                  <i class="icon icon-shopping-cart-1"></i></a></label>
+              </div>
+            </div>
+            <div class="rtable-cell sub-sum-cell">
+              <div class="rtable-cell--heading">TOTAL</div>
+              <div class="total-sum-container">
+                <input type="text" name="total-sum" value="0" class="form-control total-sum" disabled />
+              </div>
+            </div>
+          </div><!-- Total Sum Row End -->
+
+        </div><!-- Responsive Table End -->
+
+      </div><!-- Calculator Table End -->
+
+      <!-- Generate Order Start -->
+      <div class="row">
+        <div class="col-lg-12">
+          <p><a href="#inputFirstName" id="generateOrder" class="btn-generate animated-element">Generate Order
+            <i class="fa fa-shopping-cart"></i></a></p>
+        </div>
+      </div><!-- Generate Order End -->
+
+    </div><!-- Container End -->
+
+  </section>
+  <!-- Order Wizard End -->
+
+  <!-- Order Wizard Contact Start -->
+  <section id="orderWizardContact">
+
+    <!-- Container Start -->
+    <div class="container">
+
+      <!-- Contact Info Start -->
+      <div class="row contact-info">
+
+        <div class="col-lg-3">
+          <div class="contact-address animated-element">
+            <i class="icon icon-map-marker"></i>
+            <h3>Address</h3>
+            <p><a
+                href="https://www.google.com/maps?ll=40.710128,-74.006227&z=14&t=m&hl=en-US&gl=BG&mapclient=embed&cid=13302823950184191043"
+                target="_blank">See on Map</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="contact-web animated-element">
+            <i class="icon icon-home2"></i>
+            <h3>Web</h3>
+            <p><a href="https://ultimatewebsolutions.net/costy">yourweb.com</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="contact-phone animated-element">
+            <i class="icon icon-phone-call2"></i>
+            <h3>Phone</h3>
+            <p><a href="tel:+123456789">+1 1234 5678 9</a></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="contact-email animated-element">
+            <i class="icon icon-envelope"></i>
+            <h3>Email</h3>
+            <p><a href="mailto:info@example.com">info@yourmail.com</a></p>
+          </div>
+        </div>
+
+      </div><!-- Contact Info End -->
+
+      <!-- Personal Data Start -->
+      <div id="personalData" class="row">
+        <div class="col-lg-12">
+          <!-- Order Container Start -->
+          <div id="orderContainer">
+            <!-- Form Start -->
+            <form name="order-form" id="orderForm" method="POST" data-parsley-validate>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>First Name:</label>
+                    <input type="text" name="firstname" class="form-control" id="inputFirstName"
+                      placeholder="Enter Your First Name" required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Last Name:</label>
+                    <input type="text" name="lastname" class="form-control" id="inputLastName"
+                      placeholder="Enter Your Last Name" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Enter Your Email"
+                      required>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="form-group">
+                    <label>Phone:</label>
+                    <input type="text" name="telephone" class="form-control" id="inputTel"
+                      placeholder="Enter Your Phone" data-parsley-type="digits" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Order List:</label>
+                    <textarea rows="5" name="order" id="inputOrderList" class="form-control"
+                      placeholder="Use the 'GENERATE ORDER' button or 'SHOPPING CART' icon" readonly></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Additional message:</label>
+                    <textarea name="message" id="inputMessage" class="form-control"
+                      placeholder="Enter your additional message."></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="pure-checkbox">
+                      <input id="terms" name="terms" type="checkbox" value="yes" required>
+                      <label for="terms">Accept the
+                        <a href="" class="color-b" data-toggle="modal" data-target="#termsInfoModal">Terms and
+                          Conditions</a>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-9">
+                  <button type="submit" name="submit" id="submitOrder" class="btn-submit animated-element">Submit</button>
+                </div>
+                <div class="col-lg-3">
+                  <p><a href="#calcTable" id="resetOrder" class="btn-reset animated-element">Reset Order List</a></p>
+                </div>
+              </div>
+            </form><!-- Form End -->
+          </div><!-- Order Container End -->
+        </div>
+      </div><!-- Personal Data End -->
+
+    </div><!-- Container End -->
+
+  </section>
+  <!-- Order Wizard Contact End -->
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Popup Discount Info -->
+  <div class="modal fade" id="discountInfoModal" tabindex="-1" role="dialog" aria-labelledby="discountInfoModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="discountInfoModalTitle">Discount Option</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="icon icon-cross"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Can be modified only be the admin!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup Extra Option Info -->
+  <div class="modal fade" id="extraOptionInfoModal" tabindex="-1" role="dialog"
+    aria-labelledby="extraOptionInfoModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="extraOptionInfoModalTitle">Extra Option</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="icon icon-cross"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Will be available after quantity input!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Popup Terms -->
+  <div class="modal fade" id="termsInfoModal" tabindex="-1" role="dialog" aria-labelledby="termsInfoModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsInfoModalTitle">Terms and Conditions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="icon icon-cross"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+            quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back To Top Button -->
+  <a href="" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Files -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+  <script src="vendor/easing/easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/parsley/parsley.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <!-- Order Wizard Javascript File -->
+  <script src="js/order-3.js"></script>
+
+
+</body>
+
+</html>
