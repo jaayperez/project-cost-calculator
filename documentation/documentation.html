@@ -1,0 +1,497 @@
+<!doctype html>
+<!--[if IE 6 ]>
+<html lang="en-us" class="ie6">
+   <![endif]-->
+<!--[if IE 7 ]>
+   <html lang="en-us" class="ie7">
+      <![endif]-->
+<!--[if IE 8 ]>
+      <html lang="en-us" class="ie8">
+         <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Project Cost Calculator And Order Wizard</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ultimate Websolutions">
+    <meta name="copyright" content="Ultimate Websolutions">
+    <meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+    <meta name="date" content="2019-01-03T00:00:00+01:00">
+    <link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.scrollTo.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script>
+        document.createElement('section');
+        var duration = '500',
+            easing = 'swing';
+    </script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Scroller Fix by Joe Iz
+        $(document).ready(function () {
+            $("#documenter_nav a").click(function (e) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1000);
+                e.preventDefault();
+            });
+        });
+    </script>
+    <style>
+        html {
+            background-color: #EEE;
+            color: #383838
+        }
+
+        ::-moz-selection {
+            background: #333636;
+            color: #00DFFC
+        }
+
+        ::selection {
+            background: #333636;
+            color: #00DFFC
+        }
+
+        #documenter_sidebar #documenter_logo {
+            background-image: url(assets/images/logo.png)
+        }
+
+        a {
+            color: #fa7268
+        }
+
+        ol,
+        p,
+        ul {
+            margin: 0;
+            line-height: 1.5em
+        }
+
+        .smallmenu {
+            font-size: 10px
+        }
+
+        hr {
+            border-top: 1px solid #D4D4D4;
+            border-bottom: 1px solid #FFF
+        }
+
+        #documenter_sidebar,
+        #documenter_sidebar ul a {
+            background-color: #343838;
+            color: #FFF
+        }
+
+        #documenter_sidebar ul a {
+            -webkit-text-shadow: 1px 1px 0 #494F4F;
+            -moz-text-shadow: 1px 1px 0 #494F4F;
+            text-shadow: 1px 1px 0 #494F4F;
+            border-top: 1px solid #494F4F;
+            border-bottom: 1px solid #212424;
+            color: #FFF
+        }
+
+        #documenter_sidebar ul {
+            border-top: 1px solid #212424
+        }
+
+        #documenter_sidebar ul a.current,
+        #documenter_sidebar ul a:hover {
+            background: #333636;
+            color: #FA7268;
+            border-top: 1px solid #333636
+        }
+
+        #documenter_copyright {
+            display: block !important;
+            visibility: visible !important
+        }
+
+        img {
+            display: block;
+            margin-bottom: 20px
+        }
+    </style>
+</head>
+
+<body class="documenter-project-quote-nice-mail-addon">
+    <div id="documenter_sidebar">
+        <a href="https://ultimatewebsolutions.net/costy/" id="documenter_logo" target="_blank"></a>
+        <ul id="documenter_nav">
+            <li><a class="current" href="#documenter_cover">Start</a></li>
+            <li><a href="#overview" title="overview">Overview</a></li>
+            <li><a href="#html-structure" title="html-css-structure">HTML Structure</a></li>
+            <li><a href="#html-structure-order-wizard" title="html-structure-order-wizard">Order Wizard Structure</a>
+            </li>
+            <li><a href="#edit-table-rows" title="edit-table-rows">Edit Calculator Table Rows</a></li>
+            <li><a href="#css-structure" title="css-structure">CSS Structure</a></li>
+            <li><a href="#color-change" title="css-structure">Color Change</a></li>
+            <li><a href="#php-code-explanation" title="php-code-explanation">PHP Code Explanation</a></li>
+            <li><a href="#javascript" title="javascript">JavaScript</a></li>
+            <li><a href="#sources-and-credits" title="sources-and-credits">Sources and Credits</a></li>
+            <li><a href="#updates" title="updates">Updates</a></li>
+        </ul>
+        <div id="documenter_copyright">Copyright Ultimate Websolutions 2019
+        </div>
+    </div>
+    <div id="documenter_content">
+        <section id="documenter_cover">
+            <h1>Costy</h1>
+            <h2>Documentation - v.1.0</h2>
+            <div id="documenter_buttons">
+            </div>
+            <hr>
+            <ul>
+                <li>Created: 19-March-2019</li>
+                <li>Latest update: 25-March-2019</li>
+                <li>By: Ultimate Websolutions</li>
+                <li>Web: <a href="https://ultimatewebsolutions.net/costy/"
+                        target="_blank">https://ultimatewebsolutions.net/costy/</a></li>
+                <li>Mail: <a href="mailto:info@ultimatewebsolutions.net">info@ultimatewebsolutions.net</a></li>
+            </ul>
+            <p>
+                Thank you for purchasing<strong> Costy</strong>.<br />
+                We hope that you will find all answers to your questions in this Documentation. <br />
+                However, if you still need support, please, go to your envato profile and <a
+                    href="https://themeforest.net/user/websoluutions#contact" target="_blank">use this form</a> to send
+                a
+                message or drop us a line: <strong><i>info@ultimatewebsolutions.net</i>
+                </strong> .We are happy to answer shortly.
+                <br />
+                <br> We appreciate, if you will have few minutes for rating in your <strong>Downloads</strong>
+                section. <br />Many thanks!
+            </p>
+        </section>
+        <section id="overview">
+            <div class="page-header">
+                <h3>Overview</h3>
+                <hr class="notop">
+            </div>
+            <p>
+                <strong>Costy</strong> is an ultra responsive, multipurpose cost calculator and order wizard template.
+                It is based on Bootstrap4 so looks great on any device.<br />
+                With the help of Costy you can provide your customers or visitors a platform where they can easily
+                calculate prices of any of your products or services. <br />
+                Besides that they will be able to generate and send an order list of the choosen products to you and
+                themselves with few clicks. <br />
+            </p>
+            <p>
+                Now Costy comes with 3 demo versions and with 8 color variations: demo-1, demo-2 and demo-3 has the same
+                structure (as listed below):
+            </p>
+            <ul>
+                <li>blue</li>
+                <li>coral</li>
+                <li>green</li>
+                <li>light-blue</li>
+                <li>light-green</li>
+                <li>orange</li>
+                <li>purple</li>
+                <li>yellow</li>
+            </ul>
+        </section>
+        <section id="html-structure">
+            <div class="page-header">
+                <h3>HTML Structure</h3>
+                <hr class="notop">
+            </div>
+            <p>The template is built up using HTML5, CSS3 and jQuery.<br />
+                The layout is centered, using Bootsrap framework grid so looks great on any device.<br />
+                It contains eye catching web parts like: icons and form elements (toggles, input fields, checkboxes).
+                <br />
+                Has great user experience with: preloader, input effects, popup images, animations and user
+                notifications.<br />
+                Works with smooth scroll navigation. <br />
+            </p>
+            <p>There are <strong>5 HTML files</strong> coming with the template at the moment:
+            </p>
+            <ul>
+                <li><strong>index.html</strong></li>
+                <li><strong>faq.html</strong></li>
+                <li><strong>order-1.html</strong></li>
+                <li><strong>order-2.html</strong></li>
+                <li><strong>order-3.html</strong></li>
+            </ul>
+            <p>The <strong>strucutre</strong> of <strong>index.html</strong>
+                file.
+            </p>
+            <ul>
+                <li>Preloader</li>
+                <li>Navbar</li>
+                <li>Hero Section</li>
+                <li>Services Section</li>
+                <li>About Section</li>
+                <li>How it works section</li>
+                <li>Footer</li>
+            </ul>
+            <p>The <strong>strucutre</strong> of <strong>faq.html</strong>
+                file.
+            </p>
+            <ul>
+                <li>Preloader</li>
+                <li>Navbar</li>
+                <li>Hero Section</li>
+                <li>FAQ Section</li>
+                <li>Footer</li>
+            </ul>
+            <p>The <strong>strucutre</strong> of <strong>order-1(-2-3).html</strong>
+                file.
+            </p>
+            <ul>
+                <li>Preloader</li>
+                <li>Navbar</li>
+                <li>Hero Section</li>
+                <li>Order Wizard - <strong>more details below</strong></li>
+                <li>Order Wizard Contact</li>
+                <li>Footer</li>
+            </ul>
+        </section>
+        <section id="html-structure-order-wizard">
+            <div class="page-header">
+                <h3>Order Wizard Structure</h3>
+                <hr class="notop">
+            </div>
+            <p><img alt="" src="assets/images/order-wizard-structure.png" /></p>
+        </section>
+        <section id="edit-table-rows">
+            <div class="page-header">
+                <h3>Edit Calculator Table Rows</h3>
+                <hr class="notop">
+            </div>
+            <h4>Edit Price Row</h4>
+            <p><img alt="" src="assets/images/edit-1st-table-row.png" /></p>
+            <h4>Edit Checkbox Toggle Details</h4>
+            <p><img alt="" src="assets/images/edit-toggle-details-in-table-row.png" /></p>
+            <h4>Extend Table With New Row</h4>
+            <p><img alt="" src="assets/images/new-row.png" /></p>
+            <h4>Organizing Table Items After The New Row</h4>
+            <p><img alt="" src="assets/images/manage-4th-row.png" /></p>
+            <p><img alt="" src="assets/images/manage-5th-row.png" /></p>
+        </section>
+        <section id="css-structure">
+            <div class="page-header">
+                <h3>CSS Structure</h3>
+                <hr class="notop">
+            </div>
+            <p>The core stylesheet files are in css folder</p>
+            <ul>
+                <li><strong>main...css</strong> - styles of them main pages (index.html, faq.html)</li>
+                <li><strong>order...css</strong> - styles of the calculator and order wizard pages: order-1(-2-3).html)
+                </li>
+                <li><strong>custom.css</strong> - your custom style can go here</li>
+            </ul>
+            <p>The main and the order css files have the following premade color skin variations:</p>
+            <ul>
+                <li><strong>main.blue.css</strong>, <strong>order-1.blue.css</strong>,
+                    <strong>order-2.blue.css</strong>, <strong>order-3.blue.css</strong></li>
+                <li><strong>main.coral.css</strong>, <strong>order-1.coral.css</strong>,
+                    <strong>order-2.coral.css</strong>, <strong>order-3.coral.css</strong></li>
+                <li><strong>main.green.css</strong>, <strong>order-1.green.css</strong>,
+                    <strong>order-2.green.css</strong>, <strong>order-3.green.css</strong></li>
+                <li><strong>main.light.blue.css</strong>, <strong>order-1.light.blue.css</strong>,
+                    <strong>order-2.light.blue.css</strong>, <strong>order-3.light.blue.css</strong></li>
+                <li><strong>main.light.green.css</strong>, <strong>order-1.light.green.css</strong>,
+                    <strong>order-2.light.green.css</strong>, <strong>order-3.light.green.css</strong></li>
+                <li><strong>main.orange.css</strong>, <strong>order-1.orange.css</strong>,
+                    <strong>order-2.orange.css</strong>, <strong>order-3.orange.css</strong></li>
+                <li><strong>main.purple.css</strong>, <strong>order-1.purple.css</strong>,
+                    <strong>order-2.purple.css</strong>, <strong>order-3.purple.css</strong></li>
+                <li><strong>main.yellow.css</strong>, <strong>order-1.yellow.css</strong>,
+                    <strong>order-2.yellow.css</strong>, <strong>order-3.yellow.css</strong></li>
+            </ul>
+            <p>The vendor stylesheet files are placed in vendor folder</p>
+            <ul>
+                <li><strong>bootstrap</strong></li>
+                <li><strong>font-awesome</strong></li>
+                <li><strong>icomoon (icon fonts)</strong></li>
+                <li><strong>lightbox</strong></li>
+                <li><strong>parsley</strong></li>
+                <li><strong>pure-css-checkbox</strong></li>
+            </ul>
+            <p>The minified stylesheet files are in <strong>css\min</strong> folder</p>
+            <p>
+                The compressed styles are minified and beggining with: styles keyword (e.g.:
+                <strong>styles.blue.min</strong> or <strong>styles.order-1.purple.min.css</strong>). <br />
+                These compressed styles are containing every necessary core and vendor styles in 1 file. This is very
+                useful from peformance, SEO (Search Optimization) point of view. <br />
+                If you uncomment (activate) and use the detailed CSS please do not forget to comment out (deactivate)
+                the compressed part in order to avoid conflicts.
+            </p>
+            <p><img alt="" src="assets/images/compressed-css.png" /></p>
+            <h4>Content of main css files</h4>
+            <pre class="prettyprint">
+1. BACK TOP TOP
+2. GENERAL
+3. PRELOADER
+4. NAVBAR
+5. FOOTER
+6. HERO SECTION
+7. SERVICES SECTION
+8. FAQ SECTION
+9. SIDEBAR
+10. THEMING OF THE BOOTSTRAP COMPONENTS</pre>
+            <h4>Content of order css files</h4>
+            <pre class="prettyprint">
+1. ORDER WIZARD, ORDER WIZARD CONTACT SECTION
+
+2. FORM STYLE
+- 2.1 Fields, Textareas
+- 2.2 Checkbox Toggles
+- 2.3 Placeholders
+- 2.4 Form Buttons
+- 2.5 Form Validation
+
+3. TABLE ELEMENTS
+- 3.1 Sub Sum, Total Sum
+- 3.2 Table Row Coloring
+- 3.3 Table Column Sizing
+- 3.4 Table Structure
+
+4. SUCCESS SUBMIT
+5. RESPONSIVE STYLES</pre>
+        </section>
+        <section id="color-change">
+            <div class="page-header">
+                <h3>Color Change</h3>
+                <hr class="notop">
+            </div>
+            <p><a href="https://www.youtube.com/watch?v=uATO_djq7SY" target="_blank">Open Video about changing skin on
+                    new tab</a></p>
+            <p><img alt="" src="assets/images/youtube-setup.png" /></p>
+            <p><iframe allowfullscreen="" height="487" src="https://www.youtube.com/embed/uATO_djq7SY"
+                    width="952"></iframe>
+            </p>
+            <p>
+                <strong>This color replacement is needed for all html and php files if you would like to setup a
+                    predefined color skin.</strong>
+            </p>
+            <p>
+                If you are working with compressed version of styles then it is enough just pick another compressed
+                style with the desired color. <br /> (E.g.: if the default template comes with blue skin and if
+                you would like to change it to yellow then you have to <strong>change styles.blue.min.css to
+                    styles.yellow.min.css</strong> in the index.html <br />
+                and <strong>change styles.order-1.blue.min.css to styles.order-1.yellow.min.css</strong> in
+                order-1.html).
+            </p>
+        </section>
+        <section id="php-code-explanation">
+            <div class="page-header">
+                <h3>PHP Code Explanation</h3>
+                <hr class="notop">
+            </div>
+            <p>PHP code can be setup in <strong>order_send.php</strong>. <br />Please only change your email (2. row),
+                your subject (3.), "from" item (4.) subject for the customer (20.), "from email address" (21.) and
+                confirmation message (24.)
+                <pre class="prettyprint lang-php linenums">
+$mail = $_POST['email'];
+$to = "websolutions.ultimate@gmail.com"; // Your email goes here
+$subject = "Order from Costy";
+$headers = "From: Costy <noreply@yourdomain.com>";
+$message = "SUMMARY\n";
+$message .= "\nFirst name: " . $_POST['firstname'];
+$message .= "\nLast name: " . $_POST['lastname'];
+$message .= "\nEmail: " . $_POST['email'];
+$message .= "\nPhone: " . $_POST['telephone'] . "\n";
+$message .= "\nORDER\n";
+$message .= "--\n" . $_POST['order'];
+$message .= "\nAdditional message: " . $_POST['message'];
+$message .= "\nTerms and conditions accepted: " . $_POST['terms'];
+
+//Receive Variable
+$sentOk = mail($to,$subject,$message,$headers);
+
+//Confirmation Page
+$user = "$mail";
+$usersubject = "Thank You for your order";
+$userheaders = "From: info@yourdomain.com\n";
+
+//Confirmation Page With Summary
+$usermessage = "Your order is successfully submitted. Thank you. We will get back to you shortly.\n\n$message";
+mail($user,$usersubject,$usermessage,$userheaders);</pre>
+        </section>
+        <section id="javascript">
+            <div class="page-header">
+                <h3>JavaScript</h3>
+                <hr class="notop">
+            </div>
+            <p>The core script files are in js folder</p>
+            <ul>
+                <li><strong>main.js</strong> - functionality for main pages</li>
+                <li><strong>order-1.js</strong> - calculator and order wizard scripts</li>
+                <li><strong>order-2.js</strong> - calculator and order wizard scripts</li>
+                <li><strong>order-3.js</strong> - calculator and order wizard scripts</li>
+            </ul>
+            <p>The vendor script files are placed in vendor folder</p>
+            <ul>
+                <li><strong>bootstrap</strong></li>
+                <li><strong>easing</strong></li>
+                <li><strong>jquery</strong></li>
+                <li><strong>lightbox2</strong></li>
+                <li><strong>parsley</strong></li>
+                <li><strong>scrollreveal</strong></li>
+            </ul><br />
+            <p>If you need, you can change your currency in the beginning of <strong>order-1(-2-3).js</strong></p>
+            <p><img alt="" src="assets/images/js-currency.png" /></p>
+            <p>The minified stylesheet files are in <strong>js\min</strong> folder</p>
+            <p>
+                The compressed scripts are minified and beggining with: scripts keyword (e.g.:
+                <strong>scripts.min.js</strong> or <strong>scripts.order-1.min.js</strong>). <br />
+                These compressed scripts are containing every necessary core and vendor scripts in 1 file. This is very
+                useful from peformance, SEO (Search Optimization) point of view.
+            </p>
+            <p><img alt="" src="assets/images/compressed-js.png" /></p>
+        </section>
+        <section id="sources-and-credits">
+            <div class="page-header">
+                <h3>Sources and Credits</h3>
+                <hr class="notop">
+            </div>
+            <p>We've used the following images, icons or other files, sources as listed.</p>
+            <ul>
+                <li><a href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" target="_blank">Google
+                        Fonts</a></li>
+                <li><a href="https://graphicriver.net/item/set-of-modern-isometric-concepts/23226947"
+                        target="_blank">Mockup Images</a></li>
+                <li><a href="https://unsplash.com" target="_blank">Images</a></li>
+                <li><a href="https://fontawesome.com/" target="_blank">Font Awesome</a></li>
+                <li><a href="https://icomoon.io/" target="_blank">Icon Fonts</a></li>
+                <li><a href="https://iceteabottle.github.io/pure-css-checkbox/" target="_blank">Checkboxes</a></li>
+                <li><a href="http://parsleyjs.org/" target="_blank">Form validation</a></li>
+                <li><a href="https://codepen.io/nordstromdesign/pen/pbdwJv" target="_blank">Responsive Tables</a></li>
+            </ul>
+        </section>
+        <section id="updates">
+            <div class="page-header">
+                <h3>Updates</h3>
+                <hr class="notop">
+            </div>
+            <p>Version 1.0 – 25-March-2019</p>
+            <p>
+                Thank you for purchasing<strong> Costy | Cost Calculator and Order Wizard</strong>.<br />
+                We hope that you have found all answers to your questions in this Documentation. <br />
+                However, if you still need support, please, go to your envato profile and <a
+                    href="https://themeforest.net/user/ultimatewebsolutions#contact" target="_blank">use this form</a>
+                to send a message <br /> or drop us a line: <strong><i>info@ultimatewebsolutions.net</i>
+                </strong> .We are happy to answer shortly.
+                <br />
+                <br> We appreciate, if you will have few minutes for rating in your <strong>Downloads</strong>
+                section. <br />Many thanks!
+            </p>
+            <p>
+                <strong>Best Regards, <br />
+                    <i>Ultimate Websolutions</i></strong>
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>
